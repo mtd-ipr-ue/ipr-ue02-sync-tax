@@ -18,7 +18,7 @@ public class ue02_2 {
 
     }
     public static boolean dateValid(int jahr, int monat) {
-        if (jahr < 0 && monat > 12 || monat < 0) {
+        if (jahr < 0 && (monat > 12 || monat < 0)) {
             Out.println(jahr + " ist weder ein valides Jahr, noch ist " + monat + " ein valider Monat!");
             return false;
         } else if (jahr < 0) {
@@ -38,7 +38,7 @@ public class ue02_2 {
             case 1, 3, 5, 7, 8, 10, 12 -> daysInMonth = 31;
             case 4, 6, 9, 11 -> daysInMonth = 30;
             case 2 -> {
-                if (jahr % 4 == 0 && jahr % 100 != 0 || jahr % 400 == 0) {
+                if ((jahr % 4 == 0 && jahr % 100 != 0) || jahr % 400 == 0) {
                     daysInMonth = 29;
                 } else {
                     daysInMonth = 28;
