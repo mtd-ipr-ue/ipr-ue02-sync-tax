@@ -1,13 +1,13 @@
 import libraries.Out;
-
+import libraries.In;
 
 public class ue02_2 {
     public static void main(String[] args) {
         Out.println("Wählen Sie ein Jahr:");
-        int jahr = libraries.In.readInt();
+        int jahr = In.readInt();
 
         Out.println("Wählen Sie einen Monat:");
-        int monat = libraries.In.readInt();
+        int monat = In.readInt();
 
         boolean datumPasst = dateValid(jahr, monat);
 
