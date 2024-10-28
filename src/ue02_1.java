@@ -3,19 +3,19 @@ import libraries.In;
 
 public class ue02_1 {
     public static void main(String[] args) {
-        int[] numbers = new int[3];
-
-        Out.println("1st Number:");
-        numbers[0] = In.readInt();
-
-        Out.println("2nd Number:");
-        numbers[1] = In.readInt();
-
-        Out.println("3rd Number:");
-        numbers[2] = In.readInt();
+        int[] numbers = getNumbers(3);
 
         int max = checkMax(numbers);
         Out.println("max number: " + max);
+    }
+
+    public static int[] getNumbers(int anzahl) {
+        int[] numbers = new int[anzahl];
+        for (int i = 1; i <= anzahl; i++) {
+            Out.println("Enter Nr." + i);
+            numbers[i - 1] = In.readInt();
+        }
+        return numbers;
     }
 
     public static int checkMax(int[] numbers) {
